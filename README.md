@@ -23,6 +23,16 @@ Once the server is started, the application should automatically open in your br
 
 Usage
 This application allows users to perform basic CRUD (Create, Read, Update, Delete) operations on blog posts. Users can create a new blog post by clicking the "Add Post" button and filling out the form. They can view the full details of a post by clicking on its title in the list of posts. Users can also edit and delete posts using the corresponding buttons.
+  
+<h2>JSON Server</h2>
+I am using json-server to simulate a RESTful API for adding and deleting data. The db.json file contains the data that is being served by the server.
+
+To run the server, first install the json-server package using npm:
+npm install -g json-server
+
+Then start the server with the following command:
+json-server --watch db.json --port 3000
+This will start the server on port 3000 and watch the db.json file for changes. You can then make HTTP requests to the server as if it were a real API.
 
 Contributing
 Contributions to this project are welcome. If you find any bugs or would like to suggest new features, please feel free to open an issue or submit a pull request.

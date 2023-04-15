@@ -1,10 +1,8 @@
 import BlogList from "./BlogList";
-import { useState } from "react";
 import useFetch from "./useFetch";
-import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 
 const Home = () => {
-    const {data: blogs,isPending,error}=useFetch('https://jsonplaceholder.typicode.com/todos/1');
+    const {isPending,error,data: blogs}=useFetch('http://localhost:8000/blogs');
 
     return ( 
         <div className="home">
